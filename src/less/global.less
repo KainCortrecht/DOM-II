@@ -1,8 +1,12 @@
 * {
   box-sizing: border-box;
 
+  transform: rotateY(0deg);
+  transition: transform 0.3s ease-in-out;
+
   &.mirror {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    transition: transform 0.3s ease-in-out;
   }
 }
 

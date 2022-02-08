@@ -10,9 +10,19 @@ window.onload = function (evt) {
       .then(text => {
           heading.textContent += text;
       })
-  });
+  })
 
   document.body.addEventListener('click', evt => {
       evt.target.classList.toggle('mirror')
+  })
+
+  document.body.addEventListener('dblclick', evt =>{
+      evt.target.outerHTML = ''
+  })
+
+  window.addEventListener('keydown', evt => {
+      if (evt.key == 6) {
+          document.body.innerHTML = '<h1>You Shall Not Pass!<h1>'
+      }
   })
 };
